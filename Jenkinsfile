@@ -20,7 +20,7 @@ pipeline{
         stage('run molecule'){
             steps{
                 dir('vector-role'){
-                    sh 'molecule test'
+                    sh 'export PATH=$PATH:/usr/local/bin/ && molecule test'
                 }
             }
         }
